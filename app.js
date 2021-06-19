@@ -2,15 +2,12 @@
 const path = require('path')
 const express = require('express')
 const hbs=require('hbs')
-//const geocode = require('./utils/geocode')
+
 const boardcast = require('./src/utils/boardcast')
 
 const app = express()
 const port=process.env.PORT||5000
 
-//console.log(path.join(__dirname))
-//console.log(path.join(__dirname,'..'))
-//console.log(path.join(__dirname,'../public'))
 //path for con fig
 const publicDirectryPath=path.join(__dirname,'/public')
 const viewsPath=path.join(__dirname,'/templates/views')
@@ -39,8 +36,7 @@ app.get('',(req,res)=>{
           stat
 
         })
-  
-  })
+    })
 })
 app.listen(port,()=>{
     console.log("server is port"+port)

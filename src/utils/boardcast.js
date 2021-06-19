@@ -1,7 +1,7 @@
 const request = require("request");
 
 const boardcast = (callback) => {
-  const url ='https://cricapi.com/api/cricketScore?apikey=g0mfjr8nUPTeXnAJzxIpouLvLq93&unique_id=1249875'
+  const url ='https://cricapi.com/api/cricketScore?apikey=USEYOURAPIKEY&unique_id=1249875'
   request({ url, json: true }, (error, response ) => {
     if (error) {
       callback("Unable to connect server", undefined);
@@ -14,7 +14,7 @@ const boardcast = (callback) => {
           stat:response.body.stat,
         });
     }
-    console.log(response.body)
+   // console.log(response.body)
   });
   
  };
